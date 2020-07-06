@@ -1,17 +1,14 @@
-// var express = require('express')
-// var router = express.Router()
-// var app = express()
-
-const words = require('./controllers/words')
+const words = require('./controllers/words_controller')
 
 exports.route = (app) => {
 
-// respond with "hello world" when a GET request is made to the homepage
-  app.get('/', function (req, res) {
-    res.send('Hello, World!')
-  });
+  //  app.get('/', function (req, res) {
+  //   res.send('Hello, World!')
+  // });
 
-  app.post('/mywords', words.create);
+  // app.post('/mywords', words.create);
+
+  app.get('/mywords', words.read);
 
   app.get('/mywords/:id?', words.read);
 

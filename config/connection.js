@@ -7,7 +7,7 @@ exports.connect = async () => {
         port: 8889,
         user: 'root',
         password: 'root',
-        database: 'lexi'
+        database: 'words_db'
     });
     return connection;
 }
